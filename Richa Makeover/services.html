@@ -1,0 +1,611 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#444343",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-tint": "#78583a",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dadada",
+              "primary-container": "#d1a986",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary-fixed": "#1c1b1b",
+              "tertiary-container": "#b2b0b0",
+              "outline-variant": "#d3c4b9",
+              "secondary-fixed-dim": "#ffb2b8",
+              "error-container": "#ffdad6",
+              "secondary-container": "#dd2a52",
+              "on-secondary-fixed-variant": "#91002d",
+              "on-primary-fixed-variant": "#5e4125",
+              "inverse-primary": "#e8bf9a",
+              "primary-fixed-dim": "#e8bf9a",
+              "on-primary": "#ffffff",
+              "surface-container": "#eeeeee",
+              primary: "#78583a",
+              "tertiary-fixed": "#e5e2e1",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#40000f",
+              "surface-container-low": "#f3f3f3",
+              "on-tertiary-fixed-variant": "#474646",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#2c1601",
+              "surface-container-high": "#e8e8e8",
+              outline: "#81756b",
+              "on-surface": "#1a1c1c",
+              surface: "#f9f9f9",
+              "secondary-fixed": "#ffdadb",
+              "tertiary-fixed-dim": "#c8c6c5",
+              "surface-bright": "#f9f9f9",
+              error: "#ba1a1a",
+              "primary-fixed": "#ffdcbf",
+              "on-secondary-container": "#fffbff",
+              secondary: "#b9003c",
+              "surface-variant": "#e2e2e2",
+              "on-primary-container": "#5a3d22",
+              "inverse-surface": "#2f3131",
+              "on-surface-variant": "#4f453d",
+              "on-background": "#1a1c1c",
+              tertiary: "#5f5e5e",
+              background: "#f9f9f9",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Plus Jakarta Sans"],
+              label: ["Plus Jakarta Sans"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      .editorial-shadow {
+        box-shadow: 0 24px 48px -12px rgba(26, 28, 28, 0.06);
+      }
+
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none"
+    >
+      <div
+        class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center relative"
+      >
+        <div
+          class="text-2xl font-serif tracking-tighter text-[#78583a] dark:text-[#d1a986]"
+        >
+          Richa Makeover
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+            href="home.html"
+            >Home</a
+          >
+          <a
+            class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+            href="gallery.html"
+            >Gallery</a
+          >
+          <a
+            class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+            href="about.html"
+            >About</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <a
+            class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-xl font-label text-sm tracking-wider uppercase scale-95 transition-transform hover:scale-100"
+            href="contact.html"
+          >
+            Book Now
+          </a>
+          <button
+            class="md:hidden flex items-center text-primary"
+            id="mobile-menu-btn"
+          >
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu Container -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-stone-900 shadow-md border-t border-surface-variant/30 flex-col py-4 px-8 gap-4"
+      >
+        <a
+          class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="home.html"
+          >Home</a
+        >
+        <a
+          class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="services.html"
+          >Services</a
+        >
+        <a
+          class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="gallery.html"
+          >Gallery</a
+        >
+        <a
+          class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="about.html"
+          >About</a
+        >
+        <a
+          class="bg-primary flex items-center justify-center text-on-primary px-6 py-3 rounded-xl text-sm font-medium tracking-wide w-full mt-2 text-center transition-transform active:scale-95"
+          href="contact.html"
+        >
+          Book Now
+        </a>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("mobile-menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        if (btn && menu) {
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
+            const icon = btn.querySelector("span");
+            icon.textContent = icon.textContent === "menu" ? "close" : "menu";
+          });
+        }
+      });
+    </script>
+    <main class="pt-24 pb-20">
+      <!-- Hero Header -->
+      <header class="max-w-7xl mx-auto px-8 py-16 text-center">
+        <span
+          class="inline-block font-label text-xs tracking-[0.2em] uppercase text-secondary mb-4"
+          >Our Offerings</span
+        >
+        <h1
+          class="font-headline text-5xl md:text-7xl text-primary tracking-tight leading-none mb-6"
+        >
+          The Art of Transformation
+        </h1>
+        <p
+          class="max-w-2xl mx-auto text-on-surface-variant text-lg leading-relaxed"
+        >
+          A curated collection of beauty rituals designed to elevate your
+          natural essence through expert artistry and premium care.
+        </p>
+      </header>
+      <!-- Services Grid - Asymmetric Layout -->
+      <section class="max-w-7xl mx-auto px-8 space-y-32">
+        <!-- Category: Makeup -->
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <div class="w-full md:w-1/2 relative group">
+            <div class="aspect-[4/5] overflow-hidden rounded-xl">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="close-up of professional makeup artist applying soft neutral eyeshadow to a model with glowing skin in warm studio lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKWUT_Q9nHPlKNZNOdrpYT_FY5SIFAgAKP6woGWaMX0X93xzw2VEq0llSZdqHeibi0X6V3Y_fnuWJXMEKBAb4TB8BNj-YClHO_IYSe6LrneqhBYLrTjOdgt5b6U734N_pYTVtVlnxgAn7XTCr6gVAeLUFRmacqqrGFr4fOsKoy10PcsgEN1IM-G3oKrUE0XVi-aXX91Pg4H_qF1SbDGDiMvJKBZ8LKzqC_Q0DMAqGH1SAqgaYvqbow0RQG3rWbFGzSfl6RS8Gq_Jw"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 -right-6 glass-panel p-8 rounded-xl editorial-shadow hidden md:block max-w-[240px]"
+            >
+              <p class="font-headline italic text-primary text-lg">
+                "Beauty begins the moment you decide to be yourself."
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 space-y-8">
+            <div class="space-y-2">
+              <h2 class="font-headline text-4xl text-on-surface">
+                Makeup Artistry
+              </h2>
+              <div class="h-1 w-12 bg-secondary"></div>
+            </div>
+            <ul class="space-y-6">
+              <li
+                class="flex justify-between items-start border-b border-outline-variant/30 pb-4"
+              >
+                <div>
+                  <h4 class="font-bold text-on-surface">HD Party Makeup</h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Flawless long-wear finish for special occasions.
+                  </p>
+                </div>
+                <span class="font-headline text-primary">From $120</span>
+              </li>
+              <li
+                class="flex justify-between items-start border-b border-outline-variant/30 pb-4"
+              >
+                <div>
+                  <h4 class="font-bold text-on-surface">Airbrush Glamour</h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Silicon-based waterproof finish for high-definition
+                    photography.
+                  </p>
+                </div>
+                <span class="font-headline text-primary">From $180</span>
+              </li>
+              <li
+                class="flex justify-between items-start border-b border-outline-variant/30 pb-4"
+              >
+                <div>
+                  <h4 class="font-bold text-on-surface">
+                    Editorial / Shoot Makeup
+                  </h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Bespoke looks tailored for portfolio and commercial shoots.
+                  </p>
+                </div>
+                <span class="font-headline text-primary">Inquire</span>
+              </li>
+            </ul>
+            <button
+              class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label tracking-widest uppercase text-sm hover:bg-on-primary-container transition-colors"
+            >
+              Book Makeup Session
+            </button>
+          </div>
+        </div>
+        <!-- Category: Hair - Reversed Layout -->
+        <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+          <div class="w-full md:w-1/2 relative group">
+            <div class="aspect-[4/5] overflow-hidden rounded-xl">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="luxury hair salon setting with a stylist's hand through shiny chestnut waves of healthy hair under bright soft lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAehI_gnkK44IeTWwuBg4D1SN8DF5HZPa7EpGxW9f8rQDG8QgXsJ7eRmTLr25gJyLBFyu_eDK62lV35GqTZAxCRSRDxAf7U4zuCeF9bqf1XXsSrEhgF8oKmEK_wmXOHH2er4l8_T1ACzTLzEyZujsbS-0qH2gqWKnzuFrr-OJTfHW0L4j-jsZ-k_6ECGC2M9Q--fzOTgQa025Ak6uhAGyC7Q1L3JjddwItytNntjJ4T8VcYD3tbG8Y5UjoLjGTo4Ma9bkLC9P2BMco"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 space-y-8">
+            <div class="space-y-2">
+              <h2 class="font-headline text-4xl text-on-surface">
+                Hair Sculpting
+              </h2>
+              <div class="h-1 w-12 bg-secondary"></div>
+            </div>
+            <ul class="space-y-6">
+              <li
+                class="flex justify-between items-start border-b border-outline-variant/30 pb-4"
+              >
+                <div>
+                  <h4 class="font-bold text-on-surface">Signature Blowouts</h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Volume and shine using premium heat protectants.
+                  </p>
+                </div>
+                <span class="font-headline text-primary">From $45</span>
+              </li>
+              <li
+                class="flex justify-between items-start border-b border-outline-variant/30 pb-4"
+              >
+                <div>
+                  <h4 class="font-bold text-on-surface">
+                    Bridal Updo &amp; Styling
+                  </h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Intricate styles including flowers and hair jewelry
+                    placement.
+                  </p>
+                </div>
+                <span class="font-headline text-primary">From $95</span>
+              </li>
+              <li
+                class="flex justify-between items-start border-b border-outline-variant/30 pb-4"
+              >
+                <div>
+                  <h4 class="font-bold text-on-surface">Hair Spa Therapy</h4>
+                  <p class="text-sm text-on-surface-variant">
+                    Deep conditioning treatment for damaged or dull hair.
+                  </p>
+                </div>
+                <span class="font-headline text-primary">From $60</span>
+              </li>
+            </ul>
+            <button
+              class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label tracking-widest uppercase text-sm hover:bg-on-primary-container transition-colors"
+            >
+              Reserve Hair Stylist
+            </button>
+          </div>
+        </div>
+        <!-- Category: Skin & Nails - Side by Side Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Nails -->
+          <div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+            <div class="aspect-video overflow-hidden rounded-lg mb-6">
+              <img
+                class="w-full h-full object-cover"
+                data-alt="close-up of elegant minimalist nail art on well-manicured hands resting on a white textured fabric"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsYC6m9z-Hc1K64nO2VRd-QoYWPpdxkRYaFu1JAZiuyi4k18gUN5cJrEpWnsKLmDAmEIJ-Il2bYb8Nb8sOCjKf87WOwLS0WgNaUn0AcByNpARrHSZu7y13OgF7tO3xJrmUi_ZOhRQ46YxXMKfAqz67BNOnoJhO_4-ck5PTVmWwgtjVrdXotINUkpdPR5ECTyW-Qajd0e173sWJjXHB2j94n6yhgmxn52FEL2znEm4TUJL9D3HheGqeooAvBrmr8Rqafz2j289n20I"
+              />
+            </div>
+            <h3 class="font-headline text-3xl text-on-surface">Nail Couture</h3>
+            <ul class="space-y-4">
+              <li class="flex justify-between text-sm">
+                <span class="text-on-surface-variant"
+                  >Gel Overlay &amp; Color</span
+                >
+                <span class="font-bold text-primary">$50</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-on-surface-variant"
+                  >Luxury Pedicure Ritual</span
+                >
+                <span class="font-bold text-primary">$65</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-on-surface-variant"
+                  >Custom Nail Art (per finger)</span
+                >
+                <span class="font-bold text-primary">$10+</span>
+              </li>
+            </ul>
+            <button
+              class="w-full border border-primary text-primary py-3 rounded-xl font-label text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all"
+            >
+              Book Nails
+            </button>
+          </div>
+          <!-- Skin -->
+          <div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+            <div class="aspect-video overflow-hidden rounded-lg mb-6">
+              <img
+                class="w-full h-full object-cover"
+                data-alt="top view of a woman receiving a calming facial treatment in a dim luxury spa environment with soft candlelight"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCynMEBwvfASskeGW6XIEh3-xMrlMlND4H3Klm-052p7Sr1Ks37-P5UjyNoDqk0UF7Cq-FWGJJpJWxYHVKJ2bmR6UZV5bf50OFWTzG74LAUc_RmXHhiYtt4IWz0OoO6xm-kB5_23cut8jlmEpYW9ZHl1lPToGAnnayXKyj_OkloT4s34L80vt79g6DE5fw9zYYsty8m4FBpLIc-28DiezlxadRt7MG70-ERdRl-SqqwnbN-H8vR0ZM_cJU4Tw2_33e2wI9W48Abv80"
+              />
+            </div>
+            <h3 class="font-headline text-3xl text-on-surface">Skin Rituals</h3>
+            <ul class="space-y-4">
+              <li class="flex justify-between text-sm">
+                <span class="text-on-surface-variant"
+                  >Radiance Glow Facial</span
+                >
+                <span class="font-bold text-primary">$85</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-on-surface-variant">Deep Pore Detox</span>
+                <span class="font-bold text-primary">$110</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-on-surface-variant"
+                  >Hydrating Silk Therapy</span
+                >
+                <span class="font-bold text-primary">$95</span>
+              </li>
+            </ul>
+            <button
+              class="w-full border border-primary text-primary py-3 rounded-xl font-label text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all"
+            >
+              Book Skin Treatment
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Bridal Packages Section - The Masterpiece -->
+      <section
+        class="mt-32 bg-[#2c1601] text-[#ffdcbf] py-24 relative overflow-hidden"
+      >
+        <!-- Decorative Element -->
+        <div
+          class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none"
+        >
+          <svg
+            class="h-full w-full"
+            viewbox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40.4,-51.7C52.7,-43.3,63.3,-31.6,68.9,-17.6C74.5,-3.6,75.1,12.7,69.5,27.1C63.9,41.5,52.1,54.1,38.1,61.9C24.1,69.7,7.8,72.7,-8.4,70.9C-24.6,69.1,-40.7,62.5,-53.4,51.3C-66,40.1,-75.1,24.3,-77.3,7.6C-79.5,-9.1,-74.8,-26.7,-64.5,-40.1C-54.2,-53.5,-38.3,-62.7,-23,-67C-7.8,-71.3,6.8,-70.7,21.6,-65.3C36.4,-59.9,51.4,-49.7,40.4,-51.7Z"
+              fill="#ffffff"
+              transform="translate(100 100)"
+            ></path>
+          </svg>
+        </div>
+        <div
+          class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+        >
+          <div class="space-y-8">
+            <span
+              class="font-label text-xs tracking-[0.3em] uppercase text-primary-container"
+              >Exclusively For Brides</span
+            >
+            <h2 class="font-headline text-5xl md:text-6xl leading-tight">
+              The Royal Bridal Journey
+            </h2>
+            <p class="text-[#d1a986] text-lg leading-relaxed">
+              Our signature bridal packages are more than just makeup; they are
+              a curated experience starting from pre-wedding consultations to
+              the final touch on your special day.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-primary-container"
+                  >auto_awesome</span
+                >
+                <span>Comprehensive Bridal Consultation &amp; Trial</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-primary-container"
+                  >favorite</span
+                >
+                <span>On-site Styling for the Entire Bridal Party</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-primary-container"
+                  >verified</span
+                >
+                <span>Premium International Product Range</span>
+              </div>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <button
+                class="bg-secondary text-white px-8 py-4 rounded-xl font-label text-sm tracking-widest uppercase hover:brightness-110 transition-all"
+              >
+                Download Brochure
+              </button>
+              <button
+                class="border border-primary-container text-primary-container px-8 py-4 rounded-xl font-label text-sm tracking-widest uppercase hover:bg-primary-container hover:text-on-primary-container transition-all"
+              >
+                Inquire Now
+              </button>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl rotate-2"
+            >
+              <img
+                class="w-full h-full object-cover"
+                data-alt="stunning Indian bride with intricate gold jewelry and red embroidered dupatta, showcasing detailed eye makeup and soft glowing skin"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLr0tJ25EwNqI7HFJ2xD4f7DrlkORx5KWvWG8LA9pgpJnXzTKTeVq8S0qycCwf6_TZaKFFUBqv1hny_VtrGF6YL9IwQweibZAuOFc3shGYeVrGtqHxGmAw5PoqdIZKfFOcHQ5ngSrS5uEEjKHvzhgmNnabLdm71qTbHzmSRmLS96l3mQYKZD2CQS0puVd60eDQLihNZUcLYKJ3uSuu-j5QM7Wm_rLOIz01iuQnvtkhiX8jFbiL4ds6Lp3NAiTw6XuaYI5SF7WIv8s"
+              />
+            </div>
+            <div
+              class="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl hidden md:block"
+            >
+              <div class="text-[#1a1c1c] text-center">
+                <div class="font-headline text-3xl font-bold">500+</div>
+                <div
+                  class="font-label text-xs tracking-widest uppercase opacity-60"
+                >
+                  Happy Brides
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter / Footer CTA -->
+      <section class="max-w-7xl mx-auto px-8 mt-32 mb-16 text-center">
+        <div
+          class="bg-surface-container-high rounded-3xl p-12 md:p-24 space-y-8"
+        >
+          <h3 class="font-headline text-4xl text-on-surface">
+            Curious about a specific look?
+          </h3>
+          <p class="max-w-xl mx-auto text-on-surface-variant">
+            Sign up for our style guide or schedule a complimentary 15-minute
+            consultation with Richa herself.
+          </p>
+          <div
+            class="flex flex-col md:flex-row justify-center gap-4 max-w-md mx-auto"
+          >
+            <input
+              class="bg-surface-container-lowest border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary text-sm"
+              placeholder="Your Email Address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-xs tracking-widest uppercase hover:opacity-90 transition-all whitespace-nowrap"
+            >
+              Join Waitlist
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f9f9f9] dark:bg-stone-950 w-full py-12 px-8">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <div>
+          <div
+            class="font-serif text-lg text-[#1a1c1c] dark:text-[#ffffff] mb-4"
+          >
+            Richa Makeover
+          </div>
+          <p
+            class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 leading-relaxed max-w-xs mx-auto md:mx-0"
+          >
+            Redefining beauty standards through professional expertise and
+            personal connection.
+          </p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a
+            class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+            href="#"
+            >Instagram</a
+          >
+          <a
+            class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+            href="#"
+            >Facebook</a
+          >
+          <a
+            class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <div class="space-y-4">
+          <div
+            class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60"
+          >
+            Hours: 9AM - 8PM
+          </div>
+          <p
+            class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60"
+          >
+            © 2024 Richa Makeover. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

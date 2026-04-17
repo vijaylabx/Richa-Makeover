@@ -1,0 +1,363 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>The Showcase | Richa Makeover</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#444343",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-tint": "#78583a",
+            "on-error-container": "#93000a",
+            "surface-dim": "#dadada",
+            "primary-container": "#d1a986",
+            "surface-container-highest": "#e2e2e2",
+            "on-tertiary-fixed": "#1c1b1b",
+            "tertiary-container": "#b2b0b0",
+            "outline-variant": "#d3c4b9",
+            "secondary-fixed-dim": "#ffb2b8",
+            "error-container": "#ffdad6",
+            "secondary-container": "#dd2a52",
+            "on-secondary-fixed-variant": "#91002d",
+            "on-primary-fixed-variant": "#5e4125",
+            "inverse-primary": "#e8bf9a",
+            "primary-fixed-dim": "#e8bf9a",
+            "on-primary": "#ffffff",
+            "surface-container": "#eeeeee",
+            primary: "#78583a",
+            "tertiary-fixed": "#e5e2e1",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#40000f",
+            "surface-container-low": "#f3f3f3",
+            "on-tertiary-fixed-variant": "#474646",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#2c1601",
+            "surface-container-high": "#e8e8e8",
+            outline: "#81756b",
+            "on-surface": "#1a1c1c",
+            surface: "#f9f9f9",
+            "secondary-fixed": "#ffdadb",
+            "tertiary-fixed-dim": "#c8c6c5",
+            "surface-bright": "#f9f9f9",
+            error: "#ba1a1a",
+            "primary-fixed": "#ffdcbf",
+            "on-secondary-container": "#fffbff",
+            secondary: "#b9003c",
+            "surface-variant": "#e2e2e2",
+            "on-primary-container": "#5a3d22",
+            "inverse-surface": "#2f3131",
+            "on-surface-variant": "#4f453d",
+            "on-background": "#1a1c1c",
+            tertiary: "#5f5e5e",
+            background: "#f9f9f9",
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem",
+          },
+          fontFamily: {
+            headline: ["Noto Serif"],
+            body: ["Plus Jakarta Sans"],
+            label: ["Plus Jakarta Sans"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 300,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-auto-rows: 200px;
+      gap: 2rem;
+    }
+
+    .item-tall {
+      grid-row: span 3;
+    }
+
+    .item-wide {
+      grid-column: span 2;
+    }
+
+    .item-square {
+      grid-row: span 2;
+    }
+
+    .glass-overlay {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background font-body">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center relative">
+      <a class="text-2xl font-serif tracking-tighter text-[#78583a] dark:text-[#d1a986]" href="home.html">Richa
+        Makeover</a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="home.html">Home</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="services.html">Services</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#b9003c] border-b border-[#b9003c] pb-1 hover:opacity-100 transition-all duration-300"
+          href="gallery.html">Gallery</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="about.html">About</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a
+          class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-xl font-label text-sm tracking-wide hover:scale-95 transition-transform duration-300"
+          href="contact.html">
+          Book Now
+        </a>
+        <button class="md:hidden flex items-center text-primary" id="mobile-menu-btn">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu Container -->
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-stone-900 shadow-md border-t border-surface-variant/30 flex-col py-4 px-8 gap-4">
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="home.html">Home</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="services.html">Services</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#b9003c] border-b border-[#b9003c] pb-1 w-fit hover:opacity-100 transition-all duration-300"
+        href="gallery.html">Gallery</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="about.html">About</a>
+      <a
+        class="bg-primary flex items-center justify-center text-on-primary px-6 py-3 rounded-xl text-sm font-medium tracking-wide w-full mt-2 text-center transition-transform active:scale-95"
+        href="contact.html">
+        Book Now
+      </a>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+          menu.classList.toggle("flex");
+          const icon = btn.querySelector("span");
+          icon.textContent = icon.textContent === "menu" ? "close" : "menu";
+        });
+      }
+    });
+  </script>
+  <main class="pt-32 pb-24">
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto px-8 mb-16 text-center">
+      <span class="inline-block text-secondary font-label text-xs tracking-[0.2em] uppercase mb-4">Portfolios &amp;
+        Collections</span>
+      <h1 class="font-headline text-5xl md:text-7xl text-on-surface mb-6 tracking-tight">
+        The Showcase
+      </h1>
+      <p class="max-w-2xl mx-auto text-on-surface-variant text-lg leading-relaxed">
+        Explore a curated selection of our most transformative work. From
+        high-fashion editorials to timeless bridal elegance, witness the art
+        of refined beauty.
+      </p>
+    </header>
+    <!-- Filter System -->
+    <section class="max-w-7xl mx-auto px-8 mb-12">
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 border-b border-outline-variant/30 pb-6">
+        <button class="font-label text-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-2">
+          All Works
+        </button>
+        <button
+          class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">
+          Bridal
+        </button>
+        <button
+          class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">
+          Fashion
+        </button>
+        <button
+          class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">
+          Casual
+        </button>
+        <button
+          class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">
+          Events
+        </button>
+      </div>
+    </section>
+    <!-- Editorial Masonry Grid -->
+    <section class="max-w-7xl mx-auto px-8">
+      <div class="editorial-grid">
+        <!-- Item 1: Tall Editorial -->
+        <div class="item-tall group relative overflow-hidden rounded-xl bg-surface-container">
+          <img
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+            data-alt="high-fashion editorial portrait of a woman with avant-garde makeup and sleek hair in dramatic studio lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV5cheilSNdE6zLp6tycXjLOHsziynxC5EhJ5jEEMQmsQYqIA6b_8ynTPOee1l_AUNI7_UPxn_I3Y25zIv-FH9N2uqnkkBchbUDsTLUqIZYhvnvUEBkF3tZsjU1idg7LEBHz27hsF_ZWtBz9Mgcv97vEo6KMfIeuAvzv8i_D61iWf5n_WOHB8S-d8R6Gs6MnBHXpPtBY8ZZlA9hDOgMC5C0_wuuTyFYZywNgoO0HCT11U07-YWMxf0paY50rbKDaXhbHjzHznW3U4" />
+          <div
+            class="absolute inset-x-4 bottom-4 glass-overlay p-4 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 rounded-lg">
+            <span class="text-[10px] uppercase tracking-widest text-secondary font-label">Fashion</span>
+            <h3 class="font-headline text-lg text-on-surface">
+              Noir Elegance
+            </h3>
+          </div>
+        </div>
+        <!-- Item 2: Square Bridal -->
+        <div class="item-square group relative overflow-hidden rounded-xl bg-surface-container">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+            data-alt="traditional bridal makeup look featuring soft glowing skin and intricate gold jewelry in warm natural lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvNb2Pxh-kzUIKCprSFlTw7uk-cGfb7PIRmJ8fD2kVr9sMoktNA7912Kd3irfvONS5rUViI9tS5GPMNAa_p084g0J-jsh0i7Xk7va7tr7KhY6VBb55L0FwoE5l8fGsBDKO3yri9ui6K-Cqxj5RYROXwEy-WoMV3OD_ah_Byp25Lw1OiAPX9D1KlewcCXQovwAl88RsABMiVWjpQDOAkbqyfBsOkBQFtId3TtxMU9G-KMSZRIgnAjpTWh4Hpcr14V8u4xqnll3bVkA" />
+          <div
+            class="absolute inset-x-4 bottom-4 glass-overlay p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg">
+            <span class="text-[10px] uppercase tracking-widest text-secondary font-label">Bridal</span>
+            <h3 class="font-headline text-lg text-on-surface">
+              The Heritage Bride
+            </h3>
+          </div>
+        </div>
+        <!-- Item 3: Wide Layout -->
+        <div class="item-wide group relative overflow-hidden rounded-xl bg-surface-container">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+            data-alt="wide shot of a glamour fashion shoot with models in elegant evening gowns and sophisticated hairstyles"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA84crpTmldQoCF0rh-Ya-LaWkRQRL0uEtKXq3B-Nn9UDtugfF7Aq5C9vqCTKuRlb3eEjjuEwKp7pmc40vfXTXshb6mtDNXQhKI2_2596tYE9ZYlVrV1HARGv8jWYJcptUmZ2fgOXKyr-8SrrakbS5aIZzF0kEVNvK26fJentpVVD0VZrqCB9YGrzJs8uNkmSHZgFqownWT64kcivIDFq2Q8EfD7hVHJOUUI9hpyOTqvqVS3ww3v0XcUB9JnIV2-kZ4_HgwrGxwyi0" />
+          <div
+            class="absolute inset-x-6 bottom-6 glass-overlay p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg max-w-xs">
+            <span class="text-[10px] uppercase tracking-widest text-secondary font-label">Events</span>
+            <h3 class="font-headline text-xl text-on-surface">
+              Gala Glamour
+            </h3>
+          </div>
+        </div>
+        <!-- Item 4: Tall Portrait -->
+        <div class="item-tall group relative overflow-hidden rounded-xl bg-surface-container">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+            data-alt="close-up detail of bridal eye makeup with soft shimmer and long lashes in diffused morning light"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAATakuA8Xy0V31winyyAvvPdfPhHoJ3cbcOYUxvJhY7zVgVFEuoSuNEDKNe2ynxWeI96wJWorcUl9fv5uUXmwbdMKlSWOFrZo-1GjAHGnTT90rES50MCow3TBL0p0nS-9PCHexip9JDXYV3SQsIFyr7A3paUL8BRp44NllM1CsF3uwSQwfHcqcplmfAbka_9D8-WoG2hQKp6vaKTWhIxxOvLpdaDmF0Mjm8o5Xcd0AUctg_5Py7CmPVR_SmaJYegdh4VDsEU_kLxM" />
+          <div
+            class="absolute inset-x-4 bottom-4 glass-overlay p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg">
+            <span class="text-[10px] uppercase tracking-widest text-secondary font-label">Bridal</span>
+            <h3 class="font-headline text-lg text-on-surface">
+              Radiant Glow
+            </h3>
+          </div>
+        </div>
+        <!-- Item 5: Square Fashion -->
+        <div class="item-square group relative overflow-hidden rounded-xl bg-surface-container">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+            data-alt="chic casual makeup look on a young woman in an urban setting with soft bokeh background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH99A2PASJkGZdyj3KZEyEFZ0T0DjqCmsrssW9n8c3uYmkjSijC3p1SysLDj1fTNX5BwxPrLSL2FX2nHzOK_pnoEpvuhPCwlHFX32MUjQBLh-3QSDVBfhSK26mM17fuHYMoEfAD_q5UcsHC6vGpJhxqm_bAmDHJQSoMrPVvt6l2RITVoYDYYSgEK3nnnAL3M1Za1jx6FaBl9MB0rKqNzWukGTyL-tUhYGqzzh3Z3jfpqQjovwO0aJA0t7Wh9nmpmRQSQIpK_eVcc0" />
+          <div
+            class="absolute inset-x-4 bottom-4 glass-overlay p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg">
+            <span class="text-[10px] uppercase tracking-widest text-secondary font-label">Casual</span>
+            <h3 class="font-headline text-lg text-on-surface">
+              Modern Minimal
+            </h3>
+          </div>
+        </div>
+        <!-- Item 6: Tall Detail -->
+        <div class="item-tall group relative overflow-hidden rounded-xl bg-surface-container">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+            data-alt="stylized studio photography of intricate hair styling with floral accents and soft backlighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJPdmYnJseD-7Fj80sLlWJJChfs1uCYJw1euOwItW_8Meqfn18zNPWCJw_i1ONpGIrc70maAnlllLC1FqS2ELxz1tHZyK-RQl2s7TxJmKIxyNQcdpOPCnPd73UHftfXIbfCpgkQ7r9McF_3SINJ8_vmpTiVHi69aif8u3q_SxeZ5_7B82T3wawebAAUgtNd6KxV3P1rsU7l7Zy7Z4XMTNC8vb_PuuQRjU6t2qvCQ0rK8nx6RZWwJv6c6H3OtaePZcdKxTB7OtweO8" />
+          <div
+            class="absolute inset-x-4 bottom-4 glass-overlay p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg">
+            <span class="text-[10px] uppercase tracking-widest text-secondary font-label">Fashion</span>
+            <h3 class="font-headline text-lg text-on-surface">
+              Floral Crown
+            </h3>
+          </div>
+        </div>
+      </div>
+      <!-- Load More CTA -->
+      <div class="mt-20 flex justify-center">
+        <button class="group flex flex-col items-center gap-2">
+          <span
+            class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant group-hover:text-primary transition-colors">Discover
+            More</span>
+          <span
+            class="material-symbols-outlined text-primary group-hover:translate-y-2 transition-transform">expand_more</span>
+        </button>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full py-12 px-8 bg-[#f9f9f9] dark:bg-stone-950">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto text-center md:text-left">
+      <div>
+        <h2 class="font-serif text-lg text-[#1a1c1c] dark:text-[#ffffff] mb-4">
+          Richa Makeover
+        </h2>
+        <p
+          class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 leading-relaxed">
+          Crafting bespoke beauty experiences through editorial artistry and
+          high-fashion expertise.
+        </p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <span
+          class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#78583a] dark:text-[#d1a986] font-bold uppercase mb-2">Connect</span>
+        <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+          href="#">Instagram</a>
+        <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+          href="#">Facebook</a>
+        <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+          href="#">Contact</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <span
+          class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#78583a] dark:text-[#d1a986] font-bold uppercase mb-2">Availability</span>
+        <p class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60">
+          Hours: 9AM - 8PM
+        </p>
+        <p class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 mt-4">
+          © 2024 Richa Makeover. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Lightbox Mockup (Hidden by default, interaction description provided) -->
+  <!-- 
+        INTERACTION DESCRIPTION:
+        When a user clicks on any image in the grid:
+        1. A full-screen fixed overlay (bg-white/95) fades in with a 400ms ease-out transition.
+        2. The clicked image smoothly scales and translates to the center of the viewport.
+        3. Metadata (Title, Artist, category) fades in at the bottom left using font-headline.
+        4. A subtle 'close' button appears in the top right.
+        5. Navigation arrows appear on the left and right sides to cycle through the collection.
+        6. Scrolling is disabled on the body until the lightbox is closed.
+    -->
+</body>
+
+</html>

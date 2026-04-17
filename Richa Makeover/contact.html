@@ -1,0 +1,448 @@
+<!doctype html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us | Richa Makeover</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#e5e2e1",
+                        tertiary: "#5f5e5e",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed-variant": "#5e4125",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#e8bf9a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed-variant": "#91002d",
+                        error: "#ba1a1a",
+                        "primary-fixed-dim": "#e8bf9a",
+                        "on-tertiary-container": "#444343",
+                        "on-secondary": "#ffffff",
+                        primary: "#78583a",
+                        background: "#f9f9f9",
+                        "tertiary-container": "#b2b0b0",
+                        secondary: "#b9003c",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed": "#2c1601",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed": "#ffdadb",
+                        surface: "#f9f9f9",
+                        "on-secondary-fixed": "#40000f",
+                        "on-secondary-container": "#fffbff",
+                        "outline-variant": "#d3c4b9",
+                        "on-background": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#dd2a52",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#ffdcbf",
+                        "on-surface-variant": "#4f453d",
+                        "surface-tint": "#78583a",
+                        "on-primary-container": "#5a3d22",
+                        "secondary-fixed-dim": "#ffb2b8",
+                        "primary-container": "#d1a986",
+                        outline: "#81756b",
+                        "inverse-surface": "#2f3131",
+                        "on-error-container": "#93000a",
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem",
+                    },
+                    fontFamily: {
+                        headline: ["Noto Serif"],
+                        body: ["Plus Jakarta Sans"],
+                        label: ["Plus Jakarta Sans"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 300,
+                "GRAD" 0,
+                "opsz" 24;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 24px 48px -12px rgba(26, 28, 28, 0.06);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none no-border">
+        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center relative">
+            <a class="text-2xl font-serif tracking-tighter text-[#78583a] dark:text-[#d1a986]" href="#">Richa
+                Makeover</a>
+            <div class="hidden md:flex gap-12 items-center">
+                <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] border-b border-[#b9003c] pb-1 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+                    href="contact.html">Contact</a>
+                <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+                    href="services.html">Services</a>
+                <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+                    href="gallery.html">Gallery</a>
+                <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+                    href="about.html">About</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-medium tracking-wide scale-95 transition-transform hover:scale-100 active:scale-90"
+                    href="contact.html">
+                    Book Now
+                </a>
+                <button class="md:hidden flex items-center text-primary" id="mobile-menu-btn">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-stone-900 shadow-md border-t border-surface-variant/30 flex-col py-4 px-8 gap-4">
+            <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] border-b border-[#b9003c] pb-1 w-fit hover:text-[#78583a] transition-all duration-300"
+                href="home.html">Home</a>
+            <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+                href="services.html">Services</a>
+            <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+                href="gallery.html">Gallery</a>
+            <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+                href="about.html">About</a>
+            <a class="bg-primary flex items-center justify-center text-on-primary px-6 py-3 rounded-xl text-sm font-medium tracking-wide w-full mt-2 text-center transition-transform active:scale-95"
+                href="contact.html">
+                Book Now
+            </a>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("mobile-menu-btn");
+            const menu = document.getElementById("mobile-menu");
+            if (btn && menu) {
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                    menu.classList.toggle("flex");
+                    const icon = btn.querySelector("span");
+                    icon.textContent = icon.textContent === "menu" ? "close" : "menu";
+                });
+            }
+        });
+    </script>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative min-h-[614px] flex items-center px-6 md:px-12 overflow-hidden bg-surface">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 z-10">
+                    <span
+                        class="font-label text-secondary uppercase tracking-[0.2em] text-xs font-semibold mb-4 block">Connections</span>
+                    <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-[1.1] mb-8">
+                        Get in <span class="italic text-primary">Touch</span>
+                    </h1>
+                    <p class="text-on-surface-variant text-lg md:text-xl max-w-lg leading-relaxed font-light">
+                        Whether it's your wedding day or a celebratory evening, we are
+                        here to craft your vision into reality. Let's begin the
+                        conversation.
+                    </p>
+                </div>
+                <div class="md:col-span-5 relative">
+                    <div
+                        class="aspect-[4/5] w-full bg-surface-container-low overflow-hidden rounded-xl editorial-shadow relative group">
+                        <img alt="Luxury Makeup Studio"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Luxurious vanity setup with premium makeup brushes and gold accents in a soft morning sunlight editorial style"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrPL-pfzHPWSVIoIaR2Jt9CuvSZ_ihUKR-EUjlgQyC1N3Ntz0O6pinTfVwy2ORDYElCc0mJlNByX6OyJdRe-TVloe9WAozlW7mhRHk99TWchndqY9RVD3P2AwsS0o9lDwBG1XPxkoNRKPxsEhIrGtTczDSjX2qafF1ResigetmFbC0tt4zpL_5xd3iQv8MMyWD4vBiKSPX3Tb79kIFkgYq9ZGZ_ejX5IPzgu0JGplpCCyboqZRuJrDr8_GrhBp8lVtWUs4pfW3Y4k" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                    </div>
+                    <!-- Asymmetric Floating Element -->
+                    <div
+                        class="absolute -bottom-6 -left-12 hidden lg:block p-8 bg-surface-container-lowest backdrop-blur-xl bg-opacity-90 rounded-xl editorial-shadow max-w-xs">
+                        <p class="font-headline italic text-primary text-lg">
+                            "Beauty begins the moment you decide to be yourself."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Form & Details Section (Asymmetric Grid) -->
+        <section class="py-24 px-6 md:px-12 bg-white">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+                <!-- Inquiry Form -->
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                    <div class="p-8 md:p-12 bg-surface rounded-xl editorial-shadow">
+                        <h2 class="font-headline text-3xl mb-8">The Inquiry Form</h2>
+                        <form class="space-y-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="relative group">
+                                    <label
+                                        class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Full
+                                        Name</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all"
+                                        placeholder="Evelyn Thorne" type="text" />
+                                </div>
+                                <div class="relative group">
+                                    <label
+                                        class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Email
+                                        Address</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all"
+                                        placeholder="evelyn@atelier.com" type="email" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="relative group">
+                                    <label
+                                        class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Event
+                                        Type</label>
+                                    <select
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all appearance-none">
+                                        <option>Bridal Consultation</option>
+                                        <option>Editorial/Fashion</option>
+                                        <option>Special Occasion</option>
+                                        <option>Workshop Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="relative group">
+                                    <label
+                                        class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Event
+                                        Date</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all"
+                                        type="date" />
+                                </div>
+                            </div>
+                            <div class="relative group">
+                                <label
+                                    class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Your
+                                    Vision</label>
+                                <textarea
+                                    class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all resize-none"
+                                    placeholder="Tell us about your desired look..." rows="4"></textarea>
+                            </div>
+                            <button
+                                class="group relative inline-flex items-center justify-center px-10 py-4 font-label text-sm uppercase tracking-widest bg-primary text-on-primary rounded-xl overflow-hidden transition-all hover:bg-secondary"
+                                type="submit">
+                                <span class="relative z-10">Send Message</span>
+                                <span
+                                    class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform"
+                                    data-icon="arrow_right_alt">arrow_right_alt</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 order-1 lg:order-2 space-y-12">
+                    <div>
+                        <h2 class="font-headline text-3xl mb-8">Visit the Atelier</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">
+                            Our private studio provides a sanctuary for beauty and
+                            self-care. We welcome you to experience the transformation in
+                            person.
+                        </p>
+                    </div>
+                    <div class="space-y-10">
+                        <div class="flex items-start gap-6 group">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary-fixed rounded-full text-primary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-500">
+                                <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">
+                                    Our Location
+                                </h4>
+                                <p class="font-headline text-lg text-on-surface">
+                                    12 Luxury Plaza, Kensington,<br />London W8 4BA
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 group">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary-fixed rounded-full text-primary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-500">
+                                <span class="material-symbols-outlined" data-icon="phone">phone</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">
+                                    Phone
+                                </h4>
+                                <p class="font-headline text-lg text-on-surface">
+                                    +44 20 7946 0123
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 group">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary-fixed rounded-full text-primary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-500">
+                                <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">
+                                    Email
+                                </h4>
+                                <p class="font-headline text-lg text-on-surface">
+                                    studio@richamakeover.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-8">
+                        <h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">
+                            Follow Our Artistry
+                        </h4>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center text-primary hover:border-secondary hover:text-secondary transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+                            </a>
+                            <a class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center text-primary hover:border-secondary hover:text-secondary transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-24 bg-surface-container-low px-6 md:px-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="font-label text-secondary uppercase tracking-[0.2em] text-xs font-semibold mb-4 block">Knowledge
+                        Base</span>
+                    <h2 class="font-headline text-4xl md:text-5xl mb-4">
+                        Common Inquiries
+                    </h2>
+                    <div class="w-24 h-[1px] bg-primary mx-auto opacity-30"></div>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow group cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-headline text-xl text-on-surface">
+                                How far in advance should I book my bridal makeup?
+                            </h3>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform"
+                                data-icon="add">add</span>
+                        </div>
+                        <p class="mt-4 text-on-surface-variant leading-relaxed font-light">
+                            We recommend booking at least 6 to 9 months in advance,
+                            especially for peak wedding seasons (May–September), to ensure
+                            your preferred date is available.
+                        </p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow group cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-headline text-xl text-on-surface">
+                                Do you provide on-site services for destination weddings?
+                            </h3>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform"
+                                data-icon="add">add</span>
+                        </div>
+                        <p class="mt-4 text-on-surface-variant leading-relaxed font-light">
+                            Absolutely. Our team travels internationally for destination
+                            weddings. Travel and accommodation fees are tailored based on
+                            the location.
+                        </p>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow group cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-headline text-xl text-on-surface">
+                                What brands of products do you use in the atelier?
+                            </h3>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform"
+                                data-icon="add">add</span>
+                        </div>
+                        <p class="mt-4 text-on-surface-variant leading-relaxed font-light">
+                            We use exclusively premium, high-definition products from brands
+                            like Chanel, Dior, Pat McGrath, and Hourglass to ensure
+                            longevity and a camera-ready finish.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Map Section -->
+        <section class="h-[500px] w-full bg-surface-container relative overflow-hidden">
+            <!-- Simulated Map Visual -->
+            <div class="absolute inset-0 grayscale opacity-40 hover:grayscale-0 transition-all duration-1000">
+                <img alt="Atelier Location Map" class="w-full h-full object-cover"
+                    data-alt="Minimalist aerial map view of an upscale London neighborhood with clean lines and soft beige color correction"
+                    data-location="London"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrTBqVft2W8wlU8pTNFikFGkFSxwhCOOfHdJNGOPSFjbdIB7FZso27lYVHMG5otntSK-82d_8-Ks1oTzGNpcVC3MUevkTKbkIRSe_4Dhfk1g63lbrJhwsTNaTHaoAuRuxzdCr3dNWbEJ9W2N7FdJmPbjaFOXOpLdlVdgNsyJLpedYSBhy2GP62ecnYtsnV575qJX0fEOAuxBOnLeBvyPPkmtRZZDgxUvZebgicehrKHLDS6SvUcn238Xbt2BZdgtxoL-f2OWztN3w" />
+            </div>
+            <!-- Map Overlay Card -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                <div class="bg-surface-container-lowest p-6 rounded-xl editorial-shadow text-center min-w-[280px]">
+                    <div
+                        class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined" data-icon="location_on" data-weight="fill"
+                            style="font-variation-settings: &quot;FILL&quot; 1">location_on</span>
+                    </div>
+                    <h4 class="font-headline text-lg mb-1">Richa Makeover Atelier</h4>
+                    <p class="font-label text-xs text-on-surface-variant mb-4">
+                        London W8 4BA
+                    </p>
+                    <a class="text-xs font-label uppercase tracking-widest text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors"
+                        href="https://google.com/maps?cid=8261418123822294255&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=IN&source=embed" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-stone-100 dark:bg-stone-900 w-full py-16 px-12 mt-24 flex flex-col items-center justify-center text-center">
+        <div class="font-['Noto_Serif'] text-lg italic text-[#78583a] mb-8">
+            Richa Makeover
+        </div>
+        <div class="flex gap-8 mb-8">
+            <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c]"
+                href="#">Privacy Policy</a>
+            <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c]"
+                href="#">Terms of Service</a>
+            <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c]"
+                href="#">Careers</a>
+            <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c]"
+                href="https://google.com/maps?cid=8261418123822294255&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=IN&source=embed" target="_blank" rel="noopener noreferrer">Location</a>
+        </div>
+        <div class="bg-stone-200 dark:bg-stone-800 h-[1px] w-full my-8 max-w-4xl"></div>
+        <p class="font-['Plus_Jakarta_Sans'] text-xs tracking-widest uppercase text-stone-500">
+            © 2024 Richa Makeover. Crafted for the Art of Beauty.
+        </p>
+    </footer>
+</body>
+
+</html>

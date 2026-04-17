@@ -1,0 +1,424 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#444343",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-tint": "#78583a",
+            "on-error-container": "#93000a",
+            "surface-dim": "#dadada",
+            "primary-container": "#d1a986",
+            "surface-container-highest": "#e2e2e2",
+            "on-tertiary-fixed": "#1c1b1b",
+            "tertiary-container": "#b2b0b0",
+            "outline-variant": "#d3c4b9",
+            "secondary-fixed-dim": "#ffb2b8",
+            "error-container": "#ffdad6",
+            "secondary-container": "#dd2a52",
+            "on-secondary-fixed-variant": "#91002d",
+            "on-primary-fixed-variant": "#5e4125",
+            "inverse-primary": "#e8bf9a",
+            "primary-fixed-dim": "#e8bf9a",
+            "on-primary": "#ffffff",
+            "surface-container": "#eeeeee",
+            primary: "#78583a",
+            "tertiary-fixed": "#e5e2e1",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#40000f",
+            "surface-container-low": "#f3f3f3",
+            "on-tertiary-fixed-variant": "#474646",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#2c1601",
+            "surface-container-high": "#e8e8e8",
+            outline: "#81756b",
+            "on-surface": "#1a1c1c",
+            surface: "#f9f9f9",
+            "secondary-fixed": "#ffdadb",
+            "tertiary-fixed-dim": "#c8c6c5",
+            "surface-bright": "#f9f9f9",
+            error: "#ba1a1a",
+            "primary-fixed": "#ffdcbf",
+            "on-secondary-container": "#fffbff",
+            secondary: "#b9003c",
+            "surface-variant": "#e2e2e2",
+            "on-primary-container": "#5a3d22",
+            "inverse-surface": "#2f3131",
+            "on-surface-variant": "#4f453d",
+            "on-background": "#1a1c1c",
+            tertiary: "#5f5e5e",
+            background: "#f9f9f9",
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem",
+          },
+          fontFamily: {
+            headline: ["Noto Serif"],
+            body: ["Plus Jakarta Sans"],
+            label: ["Plus Jakarta Sans"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 300,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(26, 28, 28, 0.06);
+    }
+
+    .bg-shift {
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
+  <!-- Top Navigation Bar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none no-border">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center relative">
+      <a class="text-2xl font-serif tracking-tighter text-[#78583a] dark:text-[#d1a986]" href="#">Richa Makeover</a>
+      <div class="hidden md:flex gap-12 items-center">
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] border-b border-[#b9003c] pb-1 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="home.html">Home</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="services.html">Services</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="gallery.html">Gallery</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="about.html">About</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a
+          class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-medium tracking-wide scale-95 transition-transform hover:scale-100 active:scale-90"
+          href="contact.html">
+          Book Now
+        </a>
+        <button class="md:hidden flex items-center text-primary" id="mobile-menu-btn">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu Container -->
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-stone-900 shadow-md border-t border-surface-variant/30 flex-col py-4 px-8 gap-4">
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] border-b border-[#b9003c] pb-1 w-fit hover:text-[#78583a] transition-all duration-300"
+        href="home.html">Home</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="services.html">Services</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="gallery.html">Gallery</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="about.html">About</a>
+      <a
+        class="bg-primary flex items-center justify-center text-on-primary px-6 py-3 rounded-xl text-sm font-medium tracking-wide w-full mt-2 text-center transition-transform active:scale-95"
+        href="contact.html">
+        Book Now
+      </a>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+          menu.classList.toggle("flex");
+          const icon = btn.querySelector("span");
+          icon.textContent = icon.textContent === "menu" ? "close" : "menu";
+        });
+      }
+    });
+  </script>
+  <main class="pt-32 pb-20">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-8 mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+        <div class="lg:col-span-7">
+          <span
+            class="inline-block font-label text-xs tracking-[0.2em] uppercase text-secondary mb-4">Reservations</span>
+          <h1 class="font-headline text-5xl md:text-7xl text-on-surface leading-[1.1] mb-8">
+            Let us curate your <br /><span class="italic text-primary">signature look.</span>
+          </h1>
+          <p class="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+            Experience the art of transformation. Book your private session at
+            our studio and let our artisans bring out your natural elegance.
+          </p>
+        </div>
+        <div class="lg:col-span-5 hidden lg:block">
+          <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl">
+            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              data-alt="close-up of professional makeup artist applying soft blush to a model's cheek in a luxury studio with warm cinematic lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Wq67fhyFte1JS3rrcLUJtIfw_4NoMnGMsFScBs_pF1v_IEMC-9QMplJSN_G7rZ8aLW4Iy2p-13_xcJKaaqHgANMz8yFbij4REV2vIx6qDEDa4u2JkR1bx7v3pNiDhkQCxfvzAtxDExgEGa8R-58qV8U6jjVk2I0e4HEbcue8801LFfpIAmK5N47uRiKTsnE8ZB2wSdVgSFmgDkZShaHcvGheHzl8HJtvEynVKTqH7HQXixqjLzhV8-5xiAW2Mf_5xozl_QBfdIs" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Booking & Contact Content -->
+    <section class="max-w-7xl mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <!-- Left: The Form -->
+        <div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-xl editorial-shadow">
+          <form action="#" class="space-y-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="group">
+                <label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Full
+                  Name</label>
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors placeholder:text-surface-dim"
+                  placeholder="Enter your name" type="text" />
+              </div>
+              <div class="group">
+                <label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Email
+                  Address</label>
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors placeholder:text-surface-dim"
+                  placeholder="hello@example.com" type="email" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="group">
+                <label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Phone
+                  Number</label>
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors placeholder:text-surface-dim"
+                  placeholder="+1 (555) 000-0000" type="tel" />
+              </div>
+              <div class="group">
+                <label
+                  class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Service
+                  Interest</label>
+                <select
+                  class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors appearance-none cursor-pointer">
+                  <option>Bridal Transformation</option>
+                  <option>Editorial &amp; High Fashion</option>
+                  <option>Evening Occasion</option>
+                  <option>Bespoke Consultation</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="group">
+                <label
+                  class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Preferred
+                  Date</label>
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors"
+                  type="date" />
+              </div>
+              <div class="group">
+                <label
+                  class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Preferred
+                  Time</label>
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors"
+                  type="time" />
+              </div>
+            </div>
+            <div class="group">
+              <label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Special
+                Requests</label>
+              <textarea
+                class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors placeholder:text-surface-dim resize-none"
+                placeholder="Tell us about your event..." rows="3"></textarea>
+            </div>
+            <button
+              class="w-full bg-primary text-on-primary py-5 rounded-xl font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all editorial-shadow flex items-center justify-center gap-3"
+              type="submit">
+              Request Appointment
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </form>
+        </div>
+        <!-- Right: Contact Info & Hours -->
+        <div class="lg:col-span-5 space-y-12">
+          <!-- Contact Details -->
+          <div class="space-y-8">
+            <h3 class="font-headline text-2xl">Studio Access</h3>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                  <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">
+                    Our Location
+                  </p>
+                  <p class="text-on-surface leading-relaxed">
+                    42 Atelier Street, Creative District,<br />New York, NY
+                    10012
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined">call</span>
+                </div>
+                <div>
+                  <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">
+                    Direct Line
+                  </p>
+                  <p class="text-on-surface leading-relaxed">
+                    +1 (212) 555-8899
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                  <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">
+                    Email Inquiry
+                  </p>
+                  <p class="text-on-surface leading-relaxed">
+                    atelier@richamakeover.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Opening Hours -->
+          <div class="bg-surface-container-low p-8 rounded-xl">
+            <h3 class="font-headline text-2xl mb-6">Studio Hours</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between border-b border-outline-variant/30 pb-2">
+                <span class="text-sm font-medium">Monday — Friday</span>
+                <span class="text-sm text-primary font-serif italic">9AM — 8PM</span>
+              </div>
+              <div class="flex justify-between border-b border-outline-variant/30 pb-2">
+                <span class="text-sm font-medium">Saturday</span>
+                <span class="text-sm text-primary font-serif italic">10AM — 6PM</span>
+              </div>
+              <div class="flex justify-between border-b border-outline-variant/30 pb-2">
+                <span class="text-sm font-medium">Sunday</span>
+                <span class="text-sm text-on-surface-variant opacity-60">By Appointment Only</span>
+              </div>
+            </div>
+          </div>
+          <!-- Social Icons -->
+          <div class="flex gap-4">
+            <a class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
+              href="#">
+              <span class="material-symbols-outlined">camera</span>
+            </a>
+            <a class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
+              href="#">
+              <span class="material-symbols-outlined">public</span>
+            </a>
+            <a class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
+              href="#">
+              <span class="material-symbols-outlined">alternate_email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map Section -->
+    <section class="max-w-7xl mx-auto px-8 mt-20">
+      <div class="relative h-[500px] w-full rounded-xl overflow-hidden editorial-shadow group">
+        <div class="absolute inset-0 bg-stone-200 grayscale contrast-[0.8]">
+          <img class="w-full h-full object-cover"
+            data-alt="stylized architectural map view of a city grid with soft neutral tones and minimalist typography"
+            data-location="New York"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjS_mTgr--uykOWKS0y07F5wanrqRcW647FvsRxGGugIPKtkJMNrfhGNngz7NL_ntvxCZer81oMGcqfrj2e7z35HSCiQ0Mz8D79j1N50AUuzf_mpfNILAFRt8zop_EYMJgxwVw4lphqQ-QBxKsDuNvBaTfe3YZ9ESDEkUeEuSgL6q0zpaPXFFyOYI9Vwfb6Qm8KhMhwAHdywUWyNIzsBNQWytIOzNCBVuGPG5phtb71XbAgYu5XcjawQZ2WQ1sJLdrD5xo1lITfXk" />
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-primary/20 rounded-full animate-pulse"></div>
+            <div class="relative bg-primary text-on-primary p-4 rounded-full editorial-shadow">
+              <span class="material-symbols-outlined text-3xl"
+                style="font-variation-settings: &quot;FILL&quot; 1">location_on</span>
+            </div>
+          </div>
+        </div>
+        <!-- Interactive Overlay -->
+        <div
+          class="absolute bottom-8 left-8 bg-surface-container-lowest/90 backdrop-blur-md p-6 rounded-xl editorial-shadow max-w-xs transition-transform group-hover:translate-y-[-8px]">
+          <h4 class="font-headline text-lg mb-1">Our Studio</h4>
+          <p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+            Easily accessible via public transit. Valet parking available for
+            all clients.
+          </p>
+          <a class="text-xs font-label uppercase tracking-widest text-primary border-b border-primary/30 pb-1 inline-block"
+            href="https://google.com/maps?cid=8261418123822294255&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=IN&source=embed" target="_blank" rel="noopener noreferrer">Get Directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#f9f9f9] dark:bg-stone-950 w-full py-12 px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <span class="font-serif text-lg text-[#1a1c1c] dark:text-[#ffffff] block mb-4">Richa Makeover</span>
+        <p
+          class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 max-w-xs leading-relaxed">
+          Elevating beauty through precision and artistry. Your journey to
+          elegance begins at our atelier.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h4
+          class="font-['Plus_Jakarta_Sans'] text-xs tracking-[0.2em] uppercase text-[#78583a] dark:text-[#d1a986] mb-2">
+          Connect
+        </h4>
+        <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+          href="#">Instagram</a>
+        <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+          href="#">Facebook</a>
+        <a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 hover:text-[#b9003c] transition-colors"
+          href="#">Contact</a>
+      </div>
+      <div>
+        <h4
+          class="font-['Plus_Jakarta_Sans'] text-xs tracking-[0.2em] uppercase text-[#78583a] dark:text-[#d1a986] mb-4">
+          Studio Hours
+        </h4>
+        <p class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60 mb-2">
+          Hours: 9AM - 8PM
+        </p>
+        <p class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide text-[#1a1c1c]/60 dark:text-[#f9f9f9]/60">
+          © 2024 Richa Makeover. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

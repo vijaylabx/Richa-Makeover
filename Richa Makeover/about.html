@@ -1,0 +1,383 @@
+<!doctype html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 300,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(26, 28, 28, 0.06);
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-fixed": "#e5e2e1",
+            tertiary: "#5f5e5e",
+            "surface-dim": "#dadada",
+            "on-primary-fixed-variant": "#5e4125",
+            "surface-variant": "#e2e2e2",
+            "surface-container": "#eeeeee",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#e8bf9a",
+            "surface-container-high": "#e8e8e8",
+            "on-secondary-fixed-variant": "#91002d",
+            error: "#ba1a1a",
+            "primary-fixed-dim": "#e8bf9a",
+            "on-tertiary-container": "#444343",
+            "on-secondary": "#ffffff",
+            primary: "#78583a",
+            background: "#f9f9f9",
+            "tertiary-container": "#b2b0b0",
+            secondary: "#b9003c",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f3",
+            "inverse-on-surface": "#f1f1f1",
+            "on-tertiary-fixed": "#1c1b1b",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#c8c6c5",
+            "on-surface": "#1a1c1c",
+            "surface-bright": "#f9f9f9",
+            "on-primary-fixed": "#2c1601",
+            "on-tertiary-fixed-variant": "#474646",
+            "surface-container-highest": "#e2e2e2",
+            "secondary-fixed": "#ffdadb",
+            surface: "#f9f9f9",
+            "on-secondary-fixed": "#40000f",
+            "on-secondary-container": "#fffbff",
+            "outline-variant": "#d3c4b9",
+            "on-background": "#1a1c1c",
+            "on-error": "#ffffff",
+            "secondary-container": "#dd2a52",
+            "on-tertiary": "#ffffff",
+            "primary-fixed": "#ffdcbf",
+            "on-surface-variant": "#4f453d",
+            "surface-tint": "#78583a",
+            "on-primary-container": "#5a3d22",
+            "secondary-fixed-dim": "#ffb2b8",
+            "primary-container": "#d1a986",
+            outline: "#81756b",
+            "inverse-surface": "#2f3131",
+            "on-error-container": "#93000a",
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem",
+          },
+          fontFamily: {
+            headline: ["Noto Serif"],
+            body: ["Plus Jakarta Sans"],
+            label: ["Plus Jakarta Sans"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-secondary/20">
+  <!-- Top Navigation Bar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none no-border">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center relative">
+      <a class="text-2xl font-serif tracking-tighter text-[#78583a] dark:text-[#d1a986]" href="#">Richa Makeover</a>
+      <div class="hidden md:flex gap-12 items-center">
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="home.html">Home</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="services.html">Services</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="gallery.html">Gallery</a>
+        <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] border-b border-[#b9003c] pb-1 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+          href="about.html">About</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-medium tracking-wide scale-95 transition-transform hover:scale-100 active:scale-90"
+          href="contact.html">
+          Book Now
+        </a>
+        <button class="md:hidden flex items-center text-primary" id="mobile-menu-btn">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu Container -->
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-stone-900 shadow-md border-t border-surface-variant/30 flex-col py-4 px-8 gap-4">
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="home.html">Home</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="services.html">Services</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] opacity-70 hover:opacity-100 hover:text-[#78583a] transition-all duration-300"
+        href="gallery.html">Gallery</a>
+      <a class="font-['Noto_Serif'] text-sm tracking-widest uppercase text-[#1a1c1c] dark:text-[#f9f9f9] border-b border-[#b9003c] pb-1 w-fit hover:text-[#78583a] transition-all duration-300"
+        href="about.html">About</a>
+      <div class="flex items-center gap-4">
+        <a class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-medium tracking-wide scale-95 transition-transform hover:scale-100 active:scale-90"
+          href="contact.html">
+          Book Now
+        </a>
+      </div>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+          menu.classList.toggle("flex");
+          const icon = btn.querySelector("span");
+          icon.textContent = icon.textContent === "menu" ? "close" : "menu";
+        });
+      }
+    });
+  </script>
+  <main class="pt-24">
+    <!-- Section 1: Hero Editorial -->
+    <section class="relative min-h-[921px] flex items-center px-6 md:px-12 py-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5 z-10 space-y-8">
+          <span class="label-md uppercase tracking-[0.2em] text-secondary font-semibold">The Digital Atelier</span>
+          <h1 class="text-6xl md:text-8xl font-headline leading-tight text-on-surface">
+            The Story <br /><span class="italic font-normal text-primary">of Richa</span>
+          </h1>
+          <div
+            class="bg-surface-container-lowest/80 backdrop-blur-xl p-8 md:p-12 editorial-shadow rounded-xl -mr-24 relative">
+            <p class="text-lg leading-relaxed text-on-surface-variant font-light italic">
+              "Beauty is not a mask you wear, but a light you reveal. My
+              journey began with a single brush stroke and a vision to
+              transform how women see themselves in the mirror."
+            </p>
+            <p class="mt-6 text-on-surface-variant leading-relaxed">
+              Founded by Richa, our atelier is a sanctuary where traditional
+              artistry meets contemporary technique. With over a decade of
+              redefining luxury makeup in the digital age, we don't just apply
+              product; we curate identities.
+            </p>
+          </div>
+        </div>
+        <div class="md:col-span-7 relative">
+          <div class="aspect-[4/5] w-full bg-surface-container overflow-hidden rounded-xl">
+            <img class="w-full h-full object-cover"
+              data-alt="high-end editorial portrait of a woman with ethereal makeup, soft warm lighting, neutral studio background, luxury fashion aesthetic"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9mI18_11iJyMEMW82Po66z-QifISlDEKSk6LhK8nER4KTk-KBSFKneeT4XPT2QwtIcJKNBB6ft3veRyRgRm7R6heTfplzHvC0fZRBySkNLt8gLU9qkpZkiv6OvIbz9yp525q7o_IAoJd2ypmXmE35qxGEO5xFKZaBFkSxU4E73xkgbvHMa-oP3auob4aLEPu-xvRv__ZiOZFzlNfDynTeOq5XotQ0rre4mbKVzNPazkwF8bsBxJLib2DYyCButCDuUrWM5Ko7HMU" />
+          </div>
+          <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2: Our Philosophy (Asymmetric Color Shift) -->
+    <section class="bg-surface-container-low py-32 px-6 md:px-12">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+          <div class="space-y-12 order-2 md:order-1">
+            <div class="space-y-4">
+              <h2 class="text-4xl font-headline text-on-surface">
+                The Alchemy of Precision
+              </h2>
+              <div class="w-20 h-px bg-secondary"></div>
+            </div>
+            <div class="grid grid-cols-1 gap-10">
+              <div class="flex gap-6">
+                <span class="material-symbols-outlined text-4xl text-primary"
+                  data-icon="auto_awesome">auto_awesome</span>
+                <div>
+                  <h4 class="font-headline text-xl mb-2">Bespoke Curation</h4>
+                  <p class="text-on-surface-variant leading-relaxed">
+                    Every face is a unique canvas. We analyze bone structure,
+                    skin tone, and personal essence to create a look that is
+                    exclusively yours.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <span class="material-symbols-outlined text-4xl text-primary" data-icon="content_cut">content_cut</span>
+                <div>
+                  <h4 class="font-headline text-xl mb-2">
+                    Technical Mastery
+                  </h4>
+                  <p class="text-on-surface-variant leading-relaxed">
+                    We employ cutting-edge techniques and high-performance
+                    products to ensure a finish that is both breathtaking in
+                    person and flawless on camera.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <span class="material-symbols-outlined text-4xl text-primary" data-icon="brush">brush</span>
+                <div>
+                  <h4 class="font-headline text-xl mb-2">
+                    Intentional Beauty
+                  </h4>
+                  <p class="text-on-surface-variant leading-relaxed">
+                    Our philosophy rejects the 'standardized' look. We focus
+                    on enhancing features rather than concealing them,
+                    celebrating the art of the individual.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative order-1 md:order-2">
+            <div class="aspect-square bg-surface rounded-full overflow-hidden p-4 border border-outline-variant/20">
+              <img class="w-full h-full object-cover rounded-full"
+                data-alt="close-up of a professional makeup artist hand applying fine powder with a soft brush, dramatic lighting, luxury cosmetics"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgBVf1imbyM0NdDx_AsZ4gL-50i7HASA-aL4bO1SH7xiECN7B-yd5FntlO9SPKlu_QYVSJSs9iXr23OiOl-IC1ELDqX9L2GGZ_FL0MhfXj_a2INHQCKIV2U3L52nvRg0y-YgnCFYIUrsUCJ-Z3tO5RH7BCAvM3LpurkUfd_gNcU8YyGBA3AJb24AhTAnaC_Aip1nLhEoHmgmp0ZHVwHoJtZmsInw5OLyffk5lpCqyrqWuZ9OgSn4kxnuytm4dHMN5LGXbKBuLwo8I" />
+            </div>
+            <div
+              class="absolute top-0 right-0 p-8 bg-surface-container-lowest editorial-shadow rounded-xl max-w-xs transform translate-x-12 -translate-y-8">
+              <p class="font-headline italic text-primary">
+                "Precision is the difference between vanity and art."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3: Meet the Artists (Bento Style) -->
+    <section class="py-32 px-6 md:px-12 bg-surface">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20 space-y-4">
+          <span class="label-md uppercase tracking-widest text-primary">The Collective</span>
+          <h2 class="text-5xl font-headline text-on-surface">
+            The Masters Behind the Art
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Artist 1 -->
+          <div
+            class="group relative overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow flex flex-col">
+            <div class="aspect-[16/9] overflow-hidden">
+              <img
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                data-alt="professional makeup artist in a luxury studio setting, soft morning light, sophisticated and creative atmosphere"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeblmJMr1CHRceRmwn9suNujdEZo2VkfkemOQBUo0VN77yL7O6anPUp_bhkCdBSN0umwqfyKmYVfewApyKN3IOExXJ-wpddOuvop_2y_goWqMVl7LD2ZwsBoGAlie90YoHqiFUHyXEkjiPOrwRmjf7ViUvnq9Cij4G6qzWLNTJQx87QhAImd48qL6nMF3U-urCiKtX6R2-2S0oEf4O0etIo1qH1J2i1dUO_uCQ26wge1Qd4-tp7WhaI90KfZoxdP1L24TDQdpxwYY" />
+            </div>
+            <div class="p-10 space-y-4">
+              <div class="flex justify-between items-end">
+                <div>
+                  <h3 class="text-3xl font-headline text-primary">
+                    Richa Sharma
+                  </h3>
+                  <p class="text-secondary font-medium tracking-wide uppercase text-xs mt-1">
+                    Lead Makeup Architect
+                  </p>
+                </div>
+                <div class="flex gap-4">
+                  <span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer"
+                    data-icon="share">share</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant leading-relaxed pt-4 border-t border-outline-variant/30">
+                With a background in fine arts, Richa approaches makeup as a
+                sculptural medium. Her signature "lit-from-within" glow has
+                become a benchmark in luxury bridal and editorial circles.
+              </p>
+            </div>
+          </div>
+          <!-- Artist 2 -->
+          <div
+            class="group relative overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow flex flex-col">
+            <div class="aspect-[16/9] overflow-hidden">
+              <img
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                data-alt="master hair stylist sculpting an elegant updo, artistic movement, luxury salon environment, soft focus background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn-ASg--Zn0yAeMv8-R9o96Ejg_D4jlGAiIqX7IOoXr_bVOXfCo9oiQiVXBKetwuKDkICQypKv-dPR-nC_9mLVISDb5sr4ShSKfPw1oNg9aLfDcwZAPz6lN6l1HDzZMutyeusN4DgNxw6taGX05GI70hR8PjbAOnGbZEq9etgOQv41HycG28zDi2lRKryZTLACUwgkk0dcatw2iaHFo-_lA68SuSAEVZo2m6w5UYGEXQLEjEJHS1SCTFIKnGx90lbNGDBEHXASyFQ" />
+            </div>
+            <div class="p-10 space-y-4">
+              <div class="flex justify-between items-end">
+                <div>
+                  <h3 class="text-3xl font-headline text-primary">
+                    Elena Vance
+                  </h3>
+                  <p class="text-secondary font-medium tracking-wide uppercase text-xs mt-1">
+                    Principal Hair Sculptor
+                  </p>
+                </div>
+                <div class="flex gap-4">
+                  <span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer"
+                    data-icon="share">share</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant leading-relaxed pt-4 border-t border-outline-variant/30">
+                Elena specializes in architectural hair design. From
+                effortless Parisian waves to avant-garde gala styles, her work
+                focuses on the natural movement and texture of the hair.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 4: The Quote (Glassmorphism / Minimalism) -->
+    <section class="relative py-40 px-6 md:px-12 flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-primary opacity-5"></div>
+      <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+      </div>
+      <div class="max-w-4xl mx-auto text-center relative z-10 space-y-8">
+        <span class="material-symbols-outlined text-6xl text-primary/30" data-icon="format_quote">format_quote</span>
+        <h2 class="text-4xl md:text-6xl font-headline italic leading-snug text-on-surface">
+          "Style is a way to say who you are without having to speak. We
+          simply provide the visual vocabulary."
+        </h2>
+        <div class="pt-8">
+          <p class="label-md uppercase tracking-[0.3em] font-bold text-primary">
+            Rachel Zoe
+          </p>
+          <p class="text-sm text-on-surface-variant mt-2 font-light">
+            Inspiration for the Atelier
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer Shell -->
+  <footer class="bg-stone-100 dark:bg-stone-900 w-full py-16 px-12 mt-24">
+    <div class="flex flex-col items-center justify-center text-center w-full">
+      <span class="font-headline text-lg italic text-[#78583a] mb-8">Richa Makeover</span>
+      <div class="bg-stone-200 dark:bg-stone-800 h-[1px] w-full max-w-4xl mb-8"></div>
+      <div class="flex flex-wrap justify-center gap-12 mb-12">
+        <a class="font-body text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c] transition-all duration-500"
+          href="#">Privacy Policy</a>
+        <a class="font-body text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c] transition-all duration-500"
+          href="#">Terms of Service</a>
+        <a class="font-body text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c] transition-all duration-500"
+          href="#">Careers</a>
+        <a class="font-body text-xs tracking-widest uppercase text-stone-500 hover:text-[#78583a] underline underline-offset-4 decoration-[#b9003c] transition-all duration-500"
+          href="https://google.com/maps?cid=8261418123822294255&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=IN&source=embed" target="_blank" rel="noopener noreferrer">Location</a>
+      </div>
+      <p class="font-body text-xs tracking-widest uppercase text-stone-500">
+        © 2024 Richa Makeover. Crafted for the Art of Beauty.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
